@@ -12,14 +12,14 @@ erros de impressao 0x0000005B, 0x000004F8 e 0x0000011B, com minima interacao hum
 ## Como compilar e executar
 
 ### Opcao 1: Visual Studio
-1. Abra `SysLojaPrinterTool.csproj` no Visual Studio 2022.
+1. Abra `PrinterTool.csproj` no Visual Studio 2022.
 2. Defina a configuracao para `Debug` ou `Release`.
 3. Pressione F5. O Windows solicitara elevacao (UAC) porque o `app.manifest`
    exige execucao como Administrador — isso e necessario para alterar o Registro.
 
 ### Opcao 2: linha de comando
 ```
-cd SysLojaPrinterTool
+cd PrinterTool
 dotnet build -c Release
 dotnet run -c Release
 ```
@@ -51,7 +51,7 @@ O executavel sera gerado em `bin\Release\net8.0-windows\win-x64\publish\`.
 ## Sobre os backups de Registro
 
 Antes de qualquer alteracao, a ferramenta salva um snapshot em JSON em:
-`%ProgramData%\SysLoja\PrinterTool\Backups\`
+`%ProgramData%\PrinterTool\Backups\`
 Esses arquivos permitem reverter manualmente qualquer valor alterado, mesmo que a interface
 seja fechada.
 
