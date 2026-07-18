@@ -1,4 +1,4 @@
-# SysLoja - Assistente de Impressao (C# / WPF / .NET 8)
+# Assistente de Impressao (C# / WPF / .NET 8)
 
 Ferramenta com interface grafica para diagnosticar e corrigir de forma automatizada os
 erros de impressao 0x0000005B, 0x000004F8 e 0x0000011B, com minima interacao humana.
@@ -57,7 +57,7 @@ seja fechada.
 
 ## Sobre os logs
 
-Logs tecnicos ficam em: `%ProgramData%\SysLoja\PrinterTool\Logs\`
+Logs tecnicos ficam em: `%ProgramData%\PrinterTool\Logs\`
 Retencao automatica de 30 dias.
 
 ## Observacoes importantes
