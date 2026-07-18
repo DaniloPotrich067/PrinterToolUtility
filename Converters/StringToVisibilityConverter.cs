@@ -1,0 +1,23 @@
+using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+
+namespace SysLoja.PrinterTool.Converters
+{
+    /// <summary>
+    /// Oculta um elemento quando a string vinculada esta vazia ou nula.
+    /// Usado para nao exibir "SuggestedFix" quando nao ha sugestao.
+    /// </summary>
+    public sealed class StringToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var text = value as string;
+            return string.IsNullOrWhiteSpace(text) ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+}
